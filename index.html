@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navbar with 20 Languages</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #333;
+      padding: 10px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin-right: 20px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      padding: 20px;
+    }
+    #google_translate_element {
+      float: right;
+      margin-top: -40px;
+    }
+    .goog-te-combo {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <!-- Google Translate Dropdown -->
+    <div id="google_translate_element"></div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="content">
+    <h1>Welcome to Our Website</h1>
+    <p>
+      This is a simple example page with a navigation bar. 
+      Use the dropdown above to translate the entire page into your preferred language.
+    </p>
+  </div>
+
+  <!-- Google Translate Script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'fr,de,es,it,pt,ru,zh-CN,ja,ko,ar,hi,sw,tr,nl,pl,sv,el,he,th,vi'
+        },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
